@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Alp . -Alp .. -Alp /boot
+ls -alp . -alp .. -alp /boot
