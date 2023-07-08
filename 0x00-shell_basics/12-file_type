@@ -1,2 +1,2 @@
 #!/bin/bash
-file --mime-type /tmp/iamafile
+file -b "/tmp/iamafile" | awk '{print "/tmp/iamafile:", $0}'
