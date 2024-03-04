@@ -10,14 +10,14 @@ apt-get -y install haproxy
 # edit config file
 server_config=\
 "
-frontend  cobby-frontend
+frontend  nzejoe-frontend
         bind *:80
         mode http
-        default_backend cobby-backend
+        default_backend nzejoe-backend
 backend cobby-backend
         balance roundrobin
-        server 434802-web-01 100.27.4.8:80 check
-        server 434802-web-02 18.207.1.51:80 check
+        server 469608-web-01 100.25.150.166 check
+        server 469608-web-02 100.25.166.154 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
